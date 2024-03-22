@@ -193,3 +193,4 @@ coverage
 
 client/test-results/
 client/playwright-report/
+.snippets
