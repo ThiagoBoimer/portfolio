@@ -1,6 +1,6 @@
 {
   "extends": "@vue/tsconfig/tsconfig.dom.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "tsconfig.app.json", "tsconfig.json", "tscon", "vite.config.ts", "vitest.config.ts", "fig.node.json", "tsconfig.vitest.json", "playwright.config.ts", "src/main.ts", "src/App.vue"],
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "tsconfig.app.json", "tsconfig.json", "tscon", "vite.config.ts", "fig.node.json", "src/main.ts", "src/App.vue"],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
     "composite": true,
