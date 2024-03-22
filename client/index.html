@@ -3,11 +3,54 @@
   <head>
     <meta charset="UTF-8">
     <link rel="icon" href="/favicon.ico">
+    <link id="theme-link" rel="stylesheet" href="/themes/mdc-dark-deeppurple/theme.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vite App</title>
+    <title>Thiago Boimer</title>
   </head>
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
+
+    <!-- KoFi Widget -->
+    <script src='https://storage.ko-fi.com/cdn/scripts/overlay-widget.js'></script>
+    <script>
+      kofiWidgetOverlay.draw('thiagoboimer', {
+        'type': 'floating-chat',
+        'floating-chat.donateButton.text': 'Support me',
+        'floating-chat.donateButton.background-color': '#794bc4',
+        'floating-chat.donateButton.text-color': '#fff'
+      });
+    </script>
   </body>
 </html>
+
+<style scoped>
+
+.floatingchat-container-wrap { 
+  left:unset; 
+  right: 16px;  
+}
+
+.floating-chat-kofi-popup-iframe { 
+  left:unset; 
+  right: 16px; 
+}
+
+.floatingchat-container {
+  height: 46px;
+  width: 174.69px;
+  border-radius: 100px;
+  border-style: none;
+}
+
+@media (max-width: 768px) {
+
+  .floatingchat-container-mobi {
+    height: 46px;
+    width: 166.69px;
+    border-radius: 100px;
+    border-style: none;
+  }
+}
+
+</style>
