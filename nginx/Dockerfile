@@ -18,8 +18,6 @@ RUN npm run build
 
 FROM nginx:1.23.0-alpine
 
-WORKDIR /../nginx
-
 COPY ./config /etc/nginx/
 COPY ./run.sh /run.sh
 
