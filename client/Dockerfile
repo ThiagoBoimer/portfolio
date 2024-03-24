@@ -16,4 +16,4 @@ COPY . .
 # Build the Vue.js application
 RUN npm run build
 
-COPY --from=build-stage /client/dist /etc/nginx/html
+COPY /client/dist /etc/nginx/html
