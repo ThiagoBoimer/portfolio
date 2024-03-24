@@ -12,5 +12,3 @@ VOLUME /vol/static
 VOLUME /vol/www
 
 CMD ["/run.sh"]
-
-COPY ./dist /etc/nginx/html

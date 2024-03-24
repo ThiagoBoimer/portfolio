@@ -14,6 +14,7 @@ services:
       - proxy-dhparams:/vol/proxy
       - certbot-certs:/etc/letsencrypt
       - static_data:/vol/static
+      - ./dist:/etc/nginx/html
     environment:
       - DOMAIN=${DOMAIN}
 
