@@ -2,16 +2,10 @@ version: "3.9"
 
 services:
 
-  vue-build:
-    build:
-      context: ./client
-
   nginx:
     build:
       context: ./nginx
     restart: always
-    depends_on:
-      - vue-build
     ports:
       - 80:80
       - 443:443
