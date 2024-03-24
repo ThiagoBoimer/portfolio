@@ -22,6 +22,6 @@ export default defineConfig({
     }
   },
   build: {
-    outDir: '../nginx/dist'
+    outDir: '/etc/nginx/html/'
   }
 })
