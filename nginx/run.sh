@@ -2,6 +2,10 @@
 
 set -e
 
+cd ../client
+npm install
+npm run build
+
 echo "Checking for dhparams.pem"
 if [ ! -f "/vol/proxy/ssl-dhparams.pem" ]; then
   echo "dhparams.pem does not exist - creating it"
