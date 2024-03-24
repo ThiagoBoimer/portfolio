@@ -8,6 +8,6 @@ server {
 
     location / {
         root /etc/nginx/html;
-        index index.html;  
+        autoindex on;  
     }
 }

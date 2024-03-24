@@ -2,6 +2,8 @@ FROM nginx:1.23.0-alpine
 
 COPY ./config /etc/nginx/
 COPY ./run.sh /run.sh
+COPY ./dist /etc/nginx/html/
+
 
 USER root
 
