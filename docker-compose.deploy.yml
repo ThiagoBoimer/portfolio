@@ -2,12 +2,16 @@ version: "3.9"
 
 services:
 
-  portfolio-nginx:
+  vue-build:
+    build:
+      context: ./client
+
+  nginx:
     build:
       context: ./nginx
     restart: always
     depends_on:
-      - app
+      - vue-build
     ports:
       - 80:80
       - 443:443
@@ -19,7 +23,7 @@ services:
     environment:
       - DOMAIN=${DOMAIN}
 
-  portfolio-certbot:
+  certbot:
     build:
       context: ./certbot
     command: echo "Skipping..."
@@ -30,7 +34,7 @@ services:
       - certbot-web:/vol/www
       - certbot-certs:/etc/letsencrypt/
     depends_on:
-      - portfolio-nginx
+      - nginx
 
 volumes:
   certbot-web:

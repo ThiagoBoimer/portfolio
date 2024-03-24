@@ -4,13 +4,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite --config config/vite.config.ts",
+    "dev": "vite vite.config.ts",
     "build": "run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --config config/.eslintrc.cjs",
-    "format": "prettier --write src/ --config config/.prettierrc.json"
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix .eslintrc.cjs",
+    "format": "prettier --write src/ .prettierrc.json"
   },
   "dependencies": {
     "pinia": "^2.1.7",
