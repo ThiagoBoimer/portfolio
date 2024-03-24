@@ -1,5 +1,5 @@
 # Use Node.js as the base image
-FROM node:14 as build-stage
+FROM node:21
 
 # Set working directory
 WORKDIR /client
@@ -16,4 +16,4 @@ COPY . .
 # Build the Vue.js application
 RUN npm run build
 
-COPY /client/dist /etc/nginx/html
+COPY dist /etc/nginx/html
