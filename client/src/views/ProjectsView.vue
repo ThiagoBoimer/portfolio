@@ -4,7 +4,7 @@
 
   const products = ref([
     { 
-      image: 'src/assets/images/project-residuose.png', 
+      image: 'images/project-residuose.png', 
       name: 'Residuose', 
       description: 'This application has the goal of providing a match mechanism to help companies seeking for alternative raw materials based on waste in Santa Catarina, Brazil. Data of waste generators was collected from open databases and curated to achieve the objective of the app.',
       github_url: 'https://github.com/ThiagoBoimer/residuose/',

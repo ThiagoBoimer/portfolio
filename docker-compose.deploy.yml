@@ -13,15 +13,13 @@ services:
       - certbot-web:/vol/www
       - proxy-dhparams:/vol/proxy
       - certbot-certs:/etc/letsencrypt
-      - static_data:/vol/static
-      - ./dist:/etc/nginx/html
+      - ~/portfolio/nginx/dist:/etc/nginx/html
     environment:
       - DOMAIN=${DOMAIN}
 
   certbot:
     build:
       context: ./certbot
-    command: echo "Skipping..."
     environment:
       - EMAIL=${ACME_DEFAULT_EMAIL}
       - DOMAIN=${DOMAIN}
@@ -35,5 +33,3 @@ volumes:
   certbot-web:
   proxy-dhparams:
   certbot-certs:
-  static_data:
-  data: 

@@ -34,7 +34,7 @@ const levels = ref({
 <template>
   <div class="card">
     <span class="intro">
-      <Image src="src/assets/images/me_cool.png" alt="Image" width="250" height="250" />
+      <Image src="images/me_cool.png" alt="Image" width="250" height="250" />
       <div>
         <div class="typing-effect">
           <TypingEffect :phrases="phrases"/>
@@ -53,7 +53,7 @@ const levels = ref({
           <p>Along the way, I’ve come to appreciate the significance of a workplace that fosters a culture of feedback, data-driven decision-making, transparency and equality without any form of discrimination.</p>
           
           <p>I love coding and I'm open to new work opportunities out there. If you want to know more, please download my resume below</p>
-          <a href="src/assets/docs/thiago_resume.pdf" download="thiago_resume.pdf"><Button style="font-size: 14px;" icon="pi pi-download" label="Resume" /></a>
+          <a href="docs/thiago_resume.pdf" download="thiago_resume.pdf"><Button style="font-size: 14px;" icon="pi pi-download" label="Resume" /></a>
         </div>
       </div>
     </span>

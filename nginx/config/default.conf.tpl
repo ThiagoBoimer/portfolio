@@ -7,7 +7,6 @@ server {
     }
 
     location / {
-        root /etc/nginx/html;
-        index index.html;  
+        return 301 https://$host$request_uri;
     }
 }

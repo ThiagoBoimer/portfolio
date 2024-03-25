@@ -19,8 +19,12 @@ server {
     }
 
     location / {
-        root /etc/nginx/html;
-        index index.html;  
+        return 301 https://$host$request_uri;
+
+        proxy_http_version 1.1;
+        proxy_read_timeout 300;
+        proxy_connect_timeout 300;
+        proxy_send_timeout 300;
     }
 }
 
@@ -41,20 +45,10 @@ server {
         deny all;
     }
 
-    location /static {
-        alias /vol/static;
-
-        proxy_http_version 1.1;
-        proxy_set_header Connection 'keep-alive';
-        proxy_set_header Cache-Control 'no-cache';
-        proxy_set_header Content-Type 'text/event-stream';
-        proxy_read_timeout 300;
-        proxy_connect_timeout 300;
-        proxy_send_timeout 300;
-    }
-
     location / {
+        client_max_body_size    75M;
+
         root /etc/nginx/html;
-        index index.html;  
+        autoindex on;  
     }
 }
